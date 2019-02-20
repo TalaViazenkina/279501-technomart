@@ -465,6 +465,7 @@ input[name="header-search"]:focus ~ label path {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 55px;
 }
 
 .promo-categories {
@@ -482,8 +483,6 @@ input[name="header-search"]:focus ~ label path {
 }
 
 .promo-block {
-  position: relative;
-
   width: 135px;
   padding: 20px 140px 22px 25px;
 
@@ -493,11 +492,16 @@ input[name="header-search"]:focus ~ label path {
   background-position: 210px center;
 }
 
+.product-new {
+  position: relative;
+}
+
 .product-new::before {
   content: url("../img/new-flag.png");
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 .promo-categories li:nth-child(2) {
@@ -563,6 +567,8 @@ input[name="header-search"]:focus ~ label path {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Слайдер */
+
 .promo-slider {
   position: relative;
 
@@ -623,7 +629,6 @@ input[name="header-search"]:focus ~ label path {
 .slider-item-button {
   min-width: 175px;
 }
-
 
 .slider-toggles-round {
   position: absolute;
@@ -732,4 +737,334 @@ input[name="header-search"]:focus ~ label path {
   background-color: #ffc047;
   background-image: url("../img/icon-5.svg");
   background-position: 190px center;
+}
+
+/* Популярные товары */
+
+.popular-products {
+  margin-bottom: 20px;
+}
+
+.popular-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 25px 25px 30px;
+
+  background-color: #f9f5f0;
+}
+
+.section-title {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.popular-button {
+  min-width: 233px;
+}
+
+.popular-products-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.product-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 218px;
+  margin: 0 20px 20px 0;
+  padding-bottom: 20px;
+
+  font-weight: 700;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-align: center;
+
+  border: 1px solid #eaeaea;
+}
+
+.popular-products-list li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.product-item:hover {
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.product-item-title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 30px;
+}
+
+.product-item-title a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.product-item-title a:hover,
+.product-item-title a:focus {
+  color: #ee3643;
+
+  outline: none;
+}
+
+.product-item-title a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.product-item-image {
+  order: -1;
+  width: 218px;
+  height: 160px;
+  margin: 0;
+}
+
+.product-old-price {
+  margin: 0 0 9px 0;
+
+  font-size: 17px;
+  line-height: 18px;
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+
+.product-actual-price {
+  position: relative;
+
+  min-width: 105px;
+  margin-top: auto;
+  padding: 10px;
+
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.product-actual-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -18px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-left: 19px solid #ee3643;
+}
+
+.product-actual-price:hover::after,
+.product-actual-price:focus::after {
+  border-left-color: #ca2c37;
+}
+
+.product-actual-price:active::after {
+  border-left-color: #ba2732;
+}
+
+.product-item-action {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  padding-top: 45px;
+  padding-bottom: 32px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum",  "Arial", sans-serif;
+
+  background-color: #ffffff;
+}
+
+.product-item:hover .product-item-action {
+  display: block;
+}
+
+.button-to-basket {
+  position: relative;
+
+  min-width: 75px;
+  margin-bottom: 7px;
+  padding-left: 50px;
+
+  text-align: left;
+  color: #ffffff;
+
+  background-color: #63a63e;
+  box-shadow: inset 0 -3px 0 0 #367315;
+}
+
+.button-to-basket:hover,
+.button-to-basket:focus {
+  background-color: #5fbb2d;
+}
+
+.button-to-basket:active {
+  background-color: #518534;
+  box-shadow: none;
+}
+
+.button-to-basket::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 10px;
+
+  width: 18px;
+  height: 18px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.button-to-basket:hover::before,
+.button-to-basket:focus::before,
+.button-to-basket:active::before {
+  opacity: 1;
+}
+
+.button-to-bookmark {
+  color: #32425c;
+
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 3px #63a63e;
+}
+
+.button-to-bookmark:hover,
+.button-to-bookmark:focus {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 3px #32425c;
+}
+
+.button-to-bookmark:active {
+  color: rgba(50, 66, 92, 0.3);
+
+  background-color: transparent;
+  box-shadow: inset 0 0 0 3px rgba(50, 66, 92, 0.3);
+}
+
+/* Популярные производители */
+
+.popular-manufacturers {
+  margin-bottom: 65px;
+}
+
+.manufacturers-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.manufacturer-item {
+  margin: 0 20px 20px 0;
+}
+
+.manufacturer-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.manufacturer-item-logo {
+  display: block;
+  width: 218px;
+  height: 143px;
+
+  border: 1px solid #eaeaea;
+}
+
+.manufacturer-item-logo:hover,
+.manufacturer-item-logo:focus {
+  border-color: #ffffff;
+  outline: none;
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturer-item-logo:active {
+  border-color: #ffffff;
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturer-item-logo:active img {
+  opacity: 0.3;
+}
+
+/* Слайдер с услугами */
+
+.services {
+  padding-top: 63px;
+
+  background-color: #f4f7f9;
+}
+
+.services .section-title {
+  margin-bottom: 25px;
+
+  color: #000000;
+}
+
+.services  p {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.services .section-description {
+  width: 400px;
+  margin-bottom: 65px;
+}
+
+.services-slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.services-slider-toggle {
+  position: relative;
+}
+
+.services-slider-toggle::after {
+  content: "";
+  position: absolute;
+  top: -45px;
+  right: 0;
+  bottom: -45px;
+
+  width: 10px;
+
+  background-image: url("../img/shadow.png");
+  background-repeat: no-repeat;
+  background-position: right 0 top 0;
+  background-size: 100% 100%;
+}
+
+.services-toggle {
+  display: block;
+  box-sizing: content-box;
+
+  border: none;
 }

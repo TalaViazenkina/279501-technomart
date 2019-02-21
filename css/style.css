@@ -1013,6 +1013,7 @@ input[name="header-search"]:focus ~ label path {
 /* Слайдер с услугами */
 
 .services {
+  margin-bottom: 75px;
   padding-top: 63px;
 
   background-color: #f4f7f9;
@@ -1154,7 +1155,100 @@ input[name="header-search"]:focus ~ label path {
   width: 378px;
 }
 
-
 .button-credit {
   min-width: 175px;
+}
+
+.index-column {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 85px;
+}
+
+.about-us {
+  width: 520px;
+}
+
+.about-us .section-title {
+  margin-bottom: 30px;
+
+  color: #000000;
+}
+
+.about-us p {
+  margin: 0 0 20px;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.about-us p:last-of-type {
+  width: 390px;
+}
+
+.deliverey-list {
+  margin: 0 0 35px;
+  padding: 0;
+
+  list-style: none;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.deliverey-list li {
+  position: relative;
+
+  margin: 0 0 20px;
+  padding-left: 35px;
+}
+
+.deliverey-list li:last-child {
+  margin-bottom: 0;
+}
+
+.deliverey-list li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #ee3643;
+}
+
+.button-about-us {
+  min-width: 200px;
+}
+
+.contacts {
+  width: 300px;
+}
+
+.contacts .section-title {
+  margin-bottom: 30px;
+
+  color: #000000;
+}
+
+.contacts p {
+  width: 200px;
+  margin: 0 0 35px;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.contacts-map {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.contacts-feedback {
+  min-width: 280px;
 }

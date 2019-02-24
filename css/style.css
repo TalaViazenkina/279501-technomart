@@ -573,10 +573,13 @@ input[name="header-search"]:focus ~ label path {
 .promo-slider {
   position: relative;
 
+  align-self: center;
   margin-right: 20px;
 }
 
 .promo-slider-list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 
@@ -728,6 +731,15 @@ input[name="header-search"]:focus ~ label path {
   justify-content: space-between;
 }
 
+.promo-column .promo-block {
+  margin-bottom: 20px;
+}
+
+.promo-column .promo-block:last-child {
+  margin-bottom: 0;
+}
+
+
 .promo-discount {
   background-color: #8ed78f;
   background-image: url("../img/icon-4.svg");
@@ -779,6 +791,8 @@ input[name="header-search"]:focus ~ label path {
   list-style: none;
 }
 
+/* карточка товара */
+
 .product-item {
   position: relative;
 
@@ -806,6 +820,8 @@ input[name="header-search"]:focus ~ label path {
 }
 
 .product-item-title {
+  box-sizing: border-box;
+  max-width: 100%;
   margin: 0;
   margin-bottom: 10px;
   padding: 0 30px;

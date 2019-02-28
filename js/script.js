@@ -59,9 +59,9 @@ mapClose.addEventListener("click", function (evt) {
 //окно "Добавлено в корзину"
 for (var i = 0; i < toBasketOpen.length; i++) {
   toBasketOpen[i].addEventListener("click", function (evt) {
-  evt.preventDefault();
-  toBasket.classList.add("modal-show");
-});
+    evt.preventDefault();
+    toBasket.classList.add("modal-show");
+  });
 }
 
 toBasketClose.addEventListener("click", function (evt) {
@@ -76,14 +76,14 @@ toBasketContinue.addEventListener("click", function (evt) {
 
 //Закрытие модальных окон по ESC
 window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      for (var i = 0; i < modal.length; i++) {
-        if (modal[i].classList.contains("modal-show")) {
-          modal[i].classList.remove("modal-show");
-          feedback.classList.remove("modal-error");
-        }
+  if (evt.keyCode === 27) {
+    for (var i = 0; i < modal.length; i++) {
+      if (modal[i].classList.contains("modal-show")) {
+        modal[i].classList.remove("modal-show");
+        feedback.classList.remove("modal-error");
       }
     }
+  }
 });
 
 //Промо-слайдер

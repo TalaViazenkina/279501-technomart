@@ -433,7 +433,6 @@ input[name="header-search"]:focus ~ label path {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
 .header-navigation {
   width: 100%;
 }
@@ -815,7 +814,6 @@ input[name="header-search"]:focus ~ label path {
 .promo-column .promo-block:last-child {
   margin-bottom: 0;
 }
-
 
 .promo-discount {
   background-color: #8ed78f;
@@ -2482,6 +2480,8 @@ input[name="header-search"]:focus ~ label path {
   z-index: 1;
 
   display: none;
+  width: 940px;
+  height: 446px;
 
   font-size: 0;
   line-height: 0;
